@@ -1,0 +1,16 @@
+/**
+ * Convert pixel value to rems based on the $root-font-size for the project
+ *
+ * @param    {number|string} the pixel value to convert to rems
+ * @param    {number} the baseline rem size, defaults to value of $font-size-root
+ * @returns  {string} the rem value
+ */
+@function rem($px, $font-size-root: $font-size-root) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return px-to-em($px + 0px); // That may fail.
+  } @else if unit($px) == rem {
+    @return $px;
+  }
+  @return ($px / $font-size-root) * 1rem;
+}

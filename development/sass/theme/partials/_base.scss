@@ -1,0 +1,110 @@
+
+#page {
+	overflow: hidden;
+}
+
+.bg-offset {
+	background: $offset-bg;
+}
+
+.bg-inverse {
+	background: $brand-inverse;
+	color: $inverse-text-color !important;
+}
+
+.section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.section {
+	position: relative;
+}
+
+.section,
+.header,
+.footer,
+.newsbar {
+	&.inverse {
+		background: $brand-inverse;
+		color: $inverse-text-color;
+
+		a{
+			color: $inverse-link-color;
+		}
+		a:hover,
+		a:active,
+		a:focus {
+			color: darken($inverse-link-color, 5%);
+		}
+	}
+
+	&.offset {
+		background: $offset-bg;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		&::before {
+			top: 0;
+		}
+	}
+
+}
+
+.section.bg-white {
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 1px;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	&::before {
+		top: 0;
+	}
+}
+
+.scroll-up-wrapper {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+
+	.scroll-to-top {
+		font-size: 20px;
+		i {
+			@include font-smoothing(on);
+			font-weight: 300 !important;
+			color: $gray-lightest;
+			&:first-child {
+				color: $gray-dark;
+			}
+		}
+	}
+}
+
+.input-group .form-control {
+	background-clip: border-box;
+}

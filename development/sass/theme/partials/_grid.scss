@@ -1,0 +1,89 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container {
+	@include make-container();
+	//max-width: calc(100% - 20px);
+
+	@include media-breakpoint-up(small) {
+		max-width: calc(100% - 2rem);
+	}
+	@include media-breakpoint-up(medium) {
+		max-width: calc(100% - 4rem);
+	}
+	@include media-breakpoint-up(large) {
+		max-width: calc(100% - 6rem);
+	}
+	@include media-breakpoint-up(x-large) {
+		max-width: 1140px;
+	}
+}
+
+.container .container {
+	max-width: none;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+@if $enable-grid-classes {
+	.container-fluid {
+		@include make-container();
+	}
+}
+
+
+%row {
+	@include make-row();
+}
+
+%column {
+	@include make-col-ready();
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+	.row {
+		@extend %row;
+	}
+	.column {
+		@extend %column;
+	}
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+	@include make-grid-columns();
+}
+
+$column-layouts: (1,2,3,4,6);
+@each $layout in $column-layouts {
+	.columns-#{$layout} .products,
+	.single-product .thumbnails.columns-#{$layout},
+	.footer-widgets.columns-#{$layout} {
+		@extend %row;
+	}
+
+	.columns-#{$layout} .products .product,
+	.single-product .thumbnails.columns-#{$layout} a.zoom,
+	.footer-widgets.columns-#{$layout} .block {
+		margin-left: 0;
+		margin-right: 0;
+		@extend %column;
+
+		@include media-query( $from : medium ) {
+			@include make-col($grid-columns / $layout);
+		}
+	}
+}

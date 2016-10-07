@@ -1,0 +1,45 @@
+/// Get a breakpoint's width
+///
+/// @param {String} $name - Name of the breakpoint. One of $breakpoints
+///
+/// @example scss
+///  $tablet-width: get-breakpoint-width(tablet);
+///  @media (min-width: get-breakpoint-width(desktop)) {}
+///
+/// @requires {Variable} $breakpoints
+///
+/// @returns {Number} Value in pixels
+@function get-breakpoint($name, $breakpoints: $grid-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  } @else if map-has-key($breakpoint-names, $name) {
+    @return map-get($breakpoints, map-get($breakpoint-names, $name));
+  } @else {
+    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+  }
+}
+
+@function breakpoint($name, $breakpoints: $grid-breakpoints ) {
+  @return get-breakpoint($name, $breakpoints);
+}
+
+/// Convert pixels to ems
+///
+/// @param {Number} $px - value to convert
+/// @param {Number} $font-size-root ($font-size-root) - `<body>` font size
+///
+/// @example scss
+///  $font-size-in-ems: px-to-em(16px);
+///  p { font-size: px-to-em(16px); }
+///
+/// @uses $font-size-root
+/// @returns {Number}
+@function px-to-em($px, $font-size-root: $font-size-root) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return px-to-em($px + 0px); // That may fail.
+  } @else if unit($px) == em {
+    @return $px;
+  }
+  @return ($px / $font-size-root) * 1em;
+}

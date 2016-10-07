@@ -1,0 +1,70 @@
+.heading {
+	font-family: $headings-font-family;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+%display-text {
+	font-family: $display-font-family;
+	text-transform: uppercase;
+}
+
+.display-1, .display-2, .display-3  {
+	@extend %display-text;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	@extend .heading;
+}
+
+.cursive {
+	font-family: $cursive-font-family;
+	text-transform: lowercase;
+	font-weight: 400;
+	font-style: normal;
+	// Open Type Featuers: common ligatures and contextual ligatures
+	font-variant-ligatures: common-ligatures;
+	-moz-font-feature-settings: "liga", "clig";
+	-webkit-font-feature-settings: "liga", "clig";
+	font-feature-settings: "liga", "clig";
+	@include font-smoothing(on);
+}
+
+.sub-heading {
+	font-family: $sub-headings-font-family;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.section-title {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.section-title {
+	@extend %display-text;
+	margin-bottom: 2rem;
+	color: $brand-accent;
+	font-size: 2.25rem;
+	line-height: 1.1;
+	font-weight: $display1-weight;
+	text-transform: uppercase;
+	text-align: center;
+	@include font-smoothing(on);
+}
+.section-title+.section-sub-title {
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+}
+
+.section-sub-title {
+	text-align: center;
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+.text-large {
+	font-size: $font-size-lg;
+}

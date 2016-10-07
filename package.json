@@ -1,0 +1,45 @@
+{
+  "name": "boilerpress",
+  "version": "0.0.1",
+  "description": "A scaffolding for custom wordpress theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Peavey",
+  "license": "ISC",
+  "dependencies": {
+    "wowjs": "^1.1.0",
+    "velocity-animate": "^1.1.0",
+    "bootstrap": "^4.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "bootstrap": "^4.0.0-alpha.3",
+    "es6-promise": "^3.2.1",
+    "gsap": "^1.19.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2",
+    "livereload": "^0.5.0",
+    "scrollmagic": "^2.0.5",
+    "susy": "^2.2.12",
+    "tether": "^1.3.4",
+    "velocity-animate": "^1.2.3"
+  }
+}
