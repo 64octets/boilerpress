@@ -16,7 +16,7 @@ gulp.task( 'sass', function () {
     .pipe( gulp.dest( config.outputDirectory + '/css' ) )
     .pipe( plugins.cssmin() )
     .pipe( plugins.rename( { suffix : '.min' } ) )
-    .pipe( gulp.dest( './css' ) )
+    .pipe( gulp.dest( './assets/css' ) )
 } );
 
 
