@@ -22,25 +22,25 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 
         public function __construct() {
             $this->load();
-            add_action( 'after_setup_theme',           array( $this, 'setup' ) );
-            add_action( 'widgets_init',                array( $this, 'widgets_init' ) );
-            add_action( 'wp_enqueue_scripts',          array( $this, 'scripts' ), 10 );
-            add_action( 'wp_enqueue_scripts',          array( $this, 'child_scripts' ), 30 );
-            add_action( 'wp_enqueue_scripts',          array( $this, 'google_webfonts' ), 30 );
-            add_action( 'wp_head',                     array( $this, 'typekit_webfonts' ), 1 );
-            add_action( 'enqueue_embed_scripts',       array( $this, 'print_embed_styles' ) );
-            add_action( 'wp_footer',                   array( $this, 'get_structured_data' ) );
+            add_action( 'after_setup_theme', array( $this, 'setup' ) );
+            add_action( 'widgets_init', array( $this, 'widgets_init' ) );
+            add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
+            add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 );
+            add_action( 'wp_enqueue_scripts', array( $this, 'google_webfonts' ), 30 );
+            add_action( 'wp_head', array( $this, 'typekit_webfonts' ), 1 );
+            add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
+            add_action( 'wp_footer', array( $this, 'get_structured_data' ) );
 
 
-            add_filter( 'body_class',                  array( $this, 'body_classes' ) );
-            add_filter( 'wp_page_menu_args',           array( $this, 'page_menu_args' ) );
-            add_filter( 'navigation_markup_template',  array( $this, 'navigation_markup_template' ) );
+            add_filter( 'body_class', array( $this, 'body_classes' ) );
+            add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
+            add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 
-            add_filter( 'embed_oembed_html',           array( $this, 'wrap_embed_html' ), 10, 3 );
+            add_filter( 'embed_oembed_html', array( $this, 'wrap_embed_html' ), 10, 3 );
 
-            add_filter( 'nav_menu_css_class',          array( $this, 'nav_menu_css_class' ), 10, 4 );
-            add_filter( 'nav_menu_item_id',            array( $this, 'nav_menu_item_id' ), 10, 4 );
-            add_filter( 'nav_menu_link_attributes',    array( $this, 'nav_menu_link_attributes' ), 10, 4 );
+            add_filter( 'nav_menu_css_class', array( $this, 'nav_menu_css_class' ), 10, 4 );
+            add_filter( 'nav_menu_item_id', array( $this, 'nav_menu_item_id' ), 10, 4 );
+            add_filter( 'nav_menu_link_attributes', array( $this, 'nav_menu_link_attributes' ), 10, 4 );
         }
 
         public function load() {
@@ -98,10 +98,10 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 
             // This theme uses wp_nav_menu() in two locations.
             register_nav_menus( array(
-                                    'primary'   => __( 'Primary Menu', 'boilerpress' ),
-                                    'secondary' => __( 'Secondary Menu', 'boilerpress' ),
-                                    'handheld'  => __( 'Handheld Menu', 'boilerpress' ),
-                                ) );
+                'primary'   => __( 'Primary Menu', 'boilerpress' ),
+                'secondary' => __( 'Secondary Menu', 'boilerpress' ),
+                'handheld'  => __( 'Handheld Menu', 'boilerpress' ),
+            ) );
 
             /*
              * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
@@ -318,7 +318,7 @@ if ( ! class_exists( 'BoilerPress' ) ) :
             return 'nav-item-' . $item->ID;
         }
 
-        public function nav_menu_link_attributes( $attrs, $item, $args ) {}
+        public function nav_menu_link_attributes( $attrs, $item, $args ) { }
 
         /**
          * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
