@@ -1,13 +1,13 @@
 <?php
 /**
- * Storefront template functions.
+ * Boilerpress template functions.
  *
  * @package BoilerPress
  */
 
 if ( ! function_exists( 'boilerpress_display_comments' ) ) {
     /**
-     * Storefront display comments
+     * Boilerpress display comments
      *
      * @since 0.0.1
      */
@@ -21,7 +21,7 @@ if ( ! function_exists( 'boilerpress_display_comments' ) ) {
 
 if ( ! function_exists( 'boilerpress_comment' ) ) {
     /**
-     * Storefront comment template
+     * Boilerpress comment template
      *
      * @since 0.0.1
      *
@@ -39,7 +39,7 @@ if ( ! function_exists( 'boilerpress_comment' ) ) {
         }
         ?>
         <<?php echo esc_attr( $tag ); ?><?php comment_class( empty( $args[ 'has_children' ] ) ? ''
-                                                                 : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+            : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
         <div class="comment-body">
         <div class="comment-meta commentmetadata">
             <div class="comment-author vcard">
@@ -193,17 +193,17 @@ if ( ! function_exists( 'boilerpress_site_title_or_logo' ) ) {
             // We have a logo. Logo is go.
             if ( $custom_logo_id ) {
                 $html = sprintf( '<a href="%1$s" class="logo-link" rel="home" itemprop="url">%2$s</a>',
-                                 esc_url( home_url( '/' ) ),
-                                 wp_get_attachment_image( $custom_logo_id, 'full', FALSE, array(
-                                     'class'    => 'logo',
-                                     'itemprop' => 'logo',
-                                 ) )
+                    esc_url( home_url( '/' ) ),
+                    wp_get_attachment_image( $custom_logo_id, 'full', FALSE, array(
+                        'class'    => 'logo',
+                        'itemprop' => 'logo',
+                    ) )
                 );
             } // If no logo is set but we're in the Customizer, leave a placeholder (needed for the live preview).
             elseif ( is_customize_preview() ) {
                 $html =
                     sprintf( '<a href="%1$s" class="custom-logo-link" style="display:none;"><img class="custom-logo"/></a>',
-                             esc_url( home_url( '/' ) )
+                        esc_url( home_url( '/' ) )
                     );
             }
             echo $html;
@@ -235,11 +235,11 @@ if ( ! function_exists( 'boilerpress_primary_navigation' ) ) {
             do_action( 'boilerpress_before_primary_nav' );
 
             wp_nav_menu( array(
-                             'theme_location' => 'primary',
-                             'menu_id'        => 'main-menu',
-                             'menu_class'     => 'nav navbar-nav',
-                             'container'      => FALSE
-                         ) );
+                'theme_location' => 'primary',
+                'menu_id'        => 'main-menu',
+                'menu_class'     => 'nav navbar-nav',
+                'container'      => FALSE
+            ) );
 
             do_action( 'boilerpress_after_primary_nav' );
             ?>
@@ -329,9 +329,9 @@ if ( ! function_exists( 'boilerpress_page_content' ) ) {
             <?php the_content(); ?>
             <?php
             wp_link_pages( array(
-                               'before' => '<div class="page-links">' . __( 'Pages:', 'boilerpress' ),
-                               'after'  => '</div>',
-                           ) );
+                'before' => '<div class="page-links">' . __( 'Pages:', 'boilerpress' ),
+                'after'  => '</div>',
+            ) );
             ?>
         </div><!-- .entry-content -->
         <?php
@@ -384,9 +384,9 @@ if ( ! function_exists( 'boilerpress_post_content' ) ) {
                 );
 
                 wp_link_pages( array(
-                                   'before' => '<div class="page-links">' . __( 'Pages:', 'boilerpress' ),
-                                   'after'  => '</div>',
-                               ) );
+                    'before' => '<div class="page-links">' . __( 'Pages:', 'boilerpress' ),
+                    'after'  => '</div>',
+                ) );
             } else {
                 the_excerpt();
             }
@@ -499,10 +499,10 @@ if ( ! function_exists( 'boilerpress_posted_on' ) ) {
         }
 
         $time_string = sprintf( $time_string,
-                                esc_attr( get_the_date( 'c' ) ),
-                                esc_html( get_the_date() ),
-                                esc_attr( get_the_modified_date( 'c' ) ),
-                                esc_html( get_the_modified_date() )
+            esc_attr( get_the_date( 'c' ) ),
+            esc_html( get_the_date() ),
+            esc_attr( get_the_modified_date( 'c' ) ),
+            esc_html( get_the_modified_date() )
         );
 
         $posted_on = sprintf(
@@ -856,7 +856,7 @@ if ( ! function_exists( 'boilerpress_primary_navigation_wrapper_close' ) ) {
 if ( ! function_exists( 'boilerpress_init_structured_data' ) ) {
     /**
      * Generate the structured data...
-     * Initialize Storefront::$structured_data via Storefront::set_structured_data()...
+     * Initialize Boilerpress::$structured_data via Boilerpress::set_structured_data()...
      * Hooked into:
      * `boilerpress_loop_post`
      * `boilerpress_single_post`
