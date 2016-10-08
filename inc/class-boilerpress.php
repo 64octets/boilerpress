@@ -27,11 +27,12 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 		 */
 		public function __construct() {
 			$this->load();
-
 			add_action( 'after_setup_theme',          array( $this, 'setup' ) );
 			add_action( 'widgets_init',               array( $this, 'widgets_init' ) );
 			add_action( 'wp_enqueue_scripts',         array( $this, 'scripts' ),       10 );
 			add_action( 'wp_enqueue_scripts',         array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_action( 'wp_enqueue_scripts',         array( $this, 'google_webfonts' ), 30 ); // After WooCommerce.
+			add_action( 'wp_head',                    array( $this, 'typekit_webfonts'), 1);
 			add_action( 'enqueue_embed_scripts',      array( $this, 'print_embed_styles' ) );
 			add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
 
@@ -49,13 +50,12 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 		}
 
 		public function load() {
-			require_once trailingslashit( get_template_directory() ) . 'inc/required-plugins.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/boilerpress-functions.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/boilerpress-template-hooks.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/boilerpress-template-functions.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/bp-framework/class-bp-framework.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/admin/class-boilerpress-admin.php';
-			require_once trailingslashit( get_template_directory() ) . 'inc/customizer/class-bp-customizer.php';
+			require_once get_template_directory() . '/inc/boilerpress-framework/class-boilerpress-framework.php';
+			require_once get_template_directory() . '/inc/boilerpress-functions.php';
+			require_once get_template_directory() . '/inc/boilerpress-template-hooks.php';
+			require_once get_template_directory() . '/inc/boilerpress-template-functions.php';
+			require_once get_template_directory() . '/inc/admin/class-boilerpress-admin.php';
+			require_once get_template_directory() . '/inc/customizer/class-boilerpress-customizer.php';
 		}
 
 		/**
@@ -203,6 +203,23 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 			}
 		}
 
+		public function typekit_webfonts(){
+			$typekit_id = (string) apply_filters('boilerpress_typekit_id', get_theme_mod('bp_typekit_id') );
+
+			if ( '' !== $typekit_id ) {
+				echo get_typekit_embed_code($typekit_id);
+			}
+		}
+
+
+		public function google_webfonts(){
+			$google_fonts = apply_filters( 'boilerpress_google_fonts', array() );
+
+			if ( !empty($google_fonts) ) {
+				wp_enqueue_style( 'boilerpress-google-fonts', get_google_fonts_url($google_fonts), array(), 1 );
+			}
+		}
+
 		/**
 		 * Enqueue scripts and styles.
 		 *
@@ -212,16 +229,8 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 
 			global $boilerpress_version;
 
-			/**
-			 * Google Fonts
-			 */
-			$google_fonts = apply_filters( 'boilerpress_google_font_families', array(
-				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,700,900',
-			) );
-			$query_args = array( 'family' => implode( '|', $google_fonts ), 'subset' => urlencode( 'latin,latin-ext' ) );
-			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 
-			wp_enqueue_style( 'boilerpress-google-fonts', $fonts_url, array(), null );
+
 
 			/**
 			 * Styles
@@ -349,6 +358,7 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 			$classes = array_diff($classes, array( 'page', 'home' ));
 
 			$layout = 'sidebar-right';
+			$template_name = '';
 
 			if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 				$classes[]	= 'no-wc-breadcrumb';
@@ -377,13 +387,13 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 				// Add class for page template
 				if ( $template = get_page_template() ) {
 					$template_name = isset( pathinfo( $template )[ 'filename' ] ) ? pathinfo( $template )[ 'filename' ] : '';
-
-					if ( 'full-width' === $template_name || is_front_page() ) {
-						$layout = 'full-width';
-					}
 					$classes[]='page-template-template-'.$template_name.'-php';
 				}
 			}
+			if ( 'full-width' === $template_name || is_front_page() || is_404() ) {
+				$layout = 'full-width';
+			}
+
 			$classes[]= 'layout-' . $layout;
 
 			return $classes;

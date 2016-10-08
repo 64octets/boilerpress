@@ -1,0 +1,61 @@
+.error404 {
+	background: $gray-lighter;
+}
+.error404 {
+	#content {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.error-page {
+
+	}
+	.error-display {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		text-align: center;
+	}
+	.four-o-four {
+		color: #fbfbfb;
+		font-size: 100px;
+		line-height: 1.2;
+		font-family: $headings-font-family;
+		font-weight: 800;
+		text-shadow: 1px 1px 8px #999;
+
+	}
+	.error-message {
+		font-size: 1.125rem;
+	}
+	@include media-query( $from : small ) {
+		.four-o-four {
+			font-size: 150px;
+		}
+		.error-message {
+			font-size: 2rem;
+		}
+	}
+	@include media-query( $from : medium ) {
+		.four-o-four {
+			font-size: 30vmin;
+		}
+	}
+	#search-form {
+		display: block;
+		width: 100%;
+	}
+	#search-form .input-group {
+		margin: 0 auto;
+	}
+}
+
+	.error404 .error-page-wrapper {
+		height: 75vh;
+		background: $gray-lighter;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content:center;
+	}
+	.error404 .error-page-content {
+		flex: 0 0 auto;
+	}

@@ -12,7 +12,6 @@
 
 $bp_meta = bp()->meta();
 
-$bp_meta->register_meta_boxes();
 
 add_filter( 'boilerpress_meta_boxes', 'boilerpress_meta_boxes' );
 function boilerpress_meta_boxes($meta_boxes) {
@@ -47,6 +46,21 @@ function boilerpress_meta_boxes($meta_boxes) {
 				'id'    => $prefix . 'show_title_bar',
 				'type'  => 'checkbox',
 				'default'   => '1',
+			)
+		)
+	);
+
+	$meta_boxes[] = array(
+		'id'         => $prefix . 'extra_page_meta',
+		'title'      => __(  'Page Description', 'textdomain' ),
+		'post_types' => array( 'page' ),
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'fields' => array(
+			array(
+				'name' => 'Page Description',
+				'id' => 'page_description',
+				'type' => 'text',
 			)
 		)
 	);

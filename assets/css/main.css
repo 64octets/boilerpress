@@ -2920,7 +2920,7 @@ video {
   text-transform: uppercase; }
 
 .display-1, .display-2, .display-3, .section-title {
-  font-family: "franklin-gothic-urw-cond", Helvetica-neue, Helvetica, sans-serif;
+  font-family: "Dosis", Helvetica-neue, Helvetica, sans-serif;
   text-transform: uppercase; }
 
 .cursive {
@@ -3278,7 +3278,7 @@ section.blox.parallax-sec {
     position: relative;
     z-index: 2; }
   #hero .hero-text-large {
-    font-family: "franklin-gothic-urw-cond", Helvetica-neue, Helvetica, sans-serif;
+    font-family: "Dosis", Helvetica-neue, Helvetica, sans-serif;
     font-size: 4.5rem;
     font-weight: 500;
     color: #ebebeb;
@@ -3286,7 +3286,7 @@ section.blox.parallax-sec {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
   #hero .hero-text-small {
-    font-family: "abril-titling";
+    font-family: "Playball";
     font-size: 2.5rem;
     font-weight: 300;
     font-style: italic;
@@ -3350,3 +3350,65 @@ section.blox.parallax-sec {
       line-height: 1.5; }
       .newsbar p {
         max-width: 1200px; } }
+
+.error404 {
+  background: #ebebeb; }
+
+.error404 #content {
+  margin-top: 0;
+  padding-top: 0; }
+
+.error404 .error-display {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center; }
+
+.error404 .four-o-four {
+  color: #fbfbfb;
+  font-size: 100px;
+  line-height: 1.2;
+  font-family: "franklin-gothic-urw-cond", Helvetica-neue, Helvetica, sans-serif;
+  font-weight: 800;
+  text-shadow: 1px 1px 8px #999; }
+
+.error404 .error-message {
+  font-size: 1.125rem; }
+
+@media (min-width: 36.25em) {
+  .error404 .four-o-four {
+    font-size: 150px; }
+  .error404 .error-message {
+    font-size: 2rem; } }
+
+@media (min-width: 50em) {
+  .error404 .four-o-four {
+    font-size: 30vmin; } }
+
+.error404 #search-form {
+  display: block;
+  width: 100%; }
+
+.error404 #search-form .input-group {
+  margin: 0 auto; }
+
+.error404 .error-page-wrapper {
+  height: 75vh;
+  background: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.error404 .error-page-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
