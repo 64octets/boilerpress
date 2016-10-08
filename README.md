@@ -13,9 +13,6 @@ A starter theme for custom wordpress projects. Based on Underscores and Bootstra
 <b>Install Boilerpress Theme</b>
 ```bash
 $ wp theme install https://github.com/lukePeavey/boilerpress/archive/master.zip --activate
-Theme installed successfully.
-Activating 'boilerpress'...
-Success: Switched to 'BoilerPress' theme.
 ```
 
 <b>Install Dependencies with NPM</b>
