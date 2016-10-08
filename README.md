@@ -10,8 +10,7 @@ A starter theme for custom wordpress projects. Based on Underscores and Bootstra
 
 #### Getting Started
 ---------------
-
-Install the BoilerPress theme from the command line
+<b>Install Boilerpress Theme</b>
 ```bash
 $ wp theme install https://github.com/lukePeavey/boilerpress/archive/master.zip --activate
 Theme installed successfully.
@@ -19,8 +18,7 @@ Activating 'boilerpress'...
 Success: Switched to 'BoilerPress' theme.
 ```
 
-
-#### Install Dependencies. 
+<b>Install Dependencies with NPM</b>
 
 ```bash
 $ npm install
