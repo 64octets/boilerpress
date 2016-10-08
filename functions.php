@@ -19,11 +19,6 @@ $boilerpress = (object) array(
 );
 
 /**
- * Creates the theme settings page
- */
-require __DIR__ . '/inc/theme-settings.php';
-
-/**
  * Register custom meta-boxes for pages, posts, taxonomies
  */
-require __DIR__ . '/inc/meta-boxes.php';
+require __DIR__ . '/inc/admin/meta-boxes.php';

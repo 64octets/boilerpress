@@ -20,7 +20,7 @@ class BP_Framework {
     public function customize() {
         global $bp_customize;
 
-        return isset( $bp_customize ) ? $bp_customize : ( $bp_customize = new BP_Kirki() );
+        return isset( $bp_customize ) ? $bp_customize : ( $bp_customize = new BP_Customize() );
     }
 
     public function meta() {

@@ -48,7 +48,7 @@ if ( ! class_exists( 'BoilerPress' ) ) :
             require_once get_template_directory() . '/inc/boilerpress-template-hooks.php';
             require_once get_template_directory() . '/inc/boilerpress-template-functions.php';
             require_once get_template_directory() . '/inc/admin/class-boilerpress-admin.php';
-            require_once get_template_directory() . '/inc/customizer/class-boilerpress-customizer.php';
+            require_once get_template_directory() . '/inc/admin/class-boilerpress-customizer.php';
         }
 
         /**

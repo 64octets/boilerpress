@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'BoilerPress_Customizer' ) ) :
+if ( ! class_exists( 'BoilerPress_Theme_Customizer' ) ) :
 
     /**
      * The BoilerPress Customizer class
      */
-    class BoilerPress_Customizer {
+    class BoilerPress_Theme_Customizer {
         public function __construct() {
             add_action( 'customize_register', array( $this, 'boilerpress_customize_register' ), 10 );
             add_action( 'customize_preview_init', array( $this, 'boilerpress_customize_preview_js' ) );
@@ -167,4 +167,4 @@ if ( ! class_exists( 'BoilerPress_Customizer' ) ) :
     }
 
 endif;
-return new BoilerPress_Customizer();
+return new BoilerPress_Theme_Customizer();
