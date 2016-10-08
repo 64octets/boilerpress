@@ -1,76 +1,73 @@
 .navbar {
-	padding: 0;
-	margin: 0;
-	background-color: $navbar-bg;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-	.logo {
-		max-width: 170px;
-		.logo-img, .transparent-logo-img, .sticky-logo-img {
-			display: inline-block;
-		}
-	}
+    padding: 0;
+    margin: 0;
+    background-color: $navbar-bg;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    .logo {
+        max-width: 170px;
+        .logo-img, .transparent-logo-img, .sticky-logo-img {
+            display: inline-block;
+        }
+    }
 }
 
 .navbar-content {
-	height: $mobile-navbar-height;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	@extend .container;
-	@include media-query($from: x-large) {
-		max-width: none;
-		padding-left: 10%;
-		padding-right: 10%;
-	}
+    height: $mobile-navbar-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    @extend .container;
+    @include media-query($from: x-large) {
+        max-width: none;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 
 .navbar-brand {
-	margin-right: auto;
+    margin-right: auto;
 }
 
 .navbar .main-navigation {
-	display: none;
+    display: none;
 }
 
-
 .navbar .nav-toggle {
-	display: block;
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .navbar .navbar-form {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 @include media-query($from: $mobile-nav-breakpoint) {
-	.navbar .main-navigation  {
-		display: block;
-	}
-	.navbar .nav-toggle{
-		display: none;
-	}
+    .navbar .main-navigation {
+        display: block;
+    }
+    .navbar .nav-toggle {
+        display: none;
+    }
 
+    .navbar-content {
+        height: $navbar-height;
+    }
 
-	.navbar-content {
-		height: $navbar-height;
-	}
+    .navbar-brand {
+        padding-left: $grid-gutter-width / 2;
+    }
 
-	.navbar-brand {
-		padding-left: $grid-gutter-width / 2;
-	}
+    .navbar .nav {
+        float: left;
+    }
 
-
-	.navbar .nav {
-		float:left;
-	}
-
-	.navbar .nav-link {
-		height: $input-height;
-		line-height: $input-height;
-	}
+    .navbar .nav-link {
+        height: $input-height;
+        line-height: $input-height;
+    }
 }
 

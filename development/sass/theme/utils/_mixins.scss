@@ -2,12 +2,11 @@
 @import "mixins/media-query";
 @import "mixins/ifont";
 
-
 @mixin underlinedLink() {
-	font-weight: 400;
-	text-decoration: underline;
+    font-weight: 400;
+    text-decoration: underline;
 
-	&:hover {
-		text-decoration: none;
-	}
+    &:hover {
+        text-decoration: none;
+    }
 }

@@ -1,78 +1,83 @@
 .cf {
-	@include clearfix();
+    @include clearfix();
 }
+
 .hidden {
-	display: none !important;
+    display: none !important;
 }
 
 .left {
-	float: left;
+    float: left;
 }
+
 .right {
-	float: right;
+    float: right;
 }
 
 $alignments: (center, left, right, justify);
 
 @each $alignment in $alignments {
-	.text-#{$alignment} {
-		text-align: $alignment;
-	}
+    .text-#{$alignment} {
+        text-align: $alignment;
+    }
 }
 
 .vc_row.vc_inner.align-center {
-	.vc_column_container,
-	.vc_column-inner {
-		text-align: inherit;
-	}
+    .vc_column_container,
+    .vc_column-inner {
+        text-align: inherit;
+    }
 }
 
 .p-y-0 {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
+
 .section-content {
-	padding: 3.75rem;
+    padding: 3.75rem;
 }
 
 .parallax-section {
-	position: relative;
-	overflow: hidden;
-	min-height: 50vh;
-	@include media-breakpoint-up(medium) {
-		min-height: 50vh
-	}
-	.parallax-background {
-		height: 150%;
-		top:-20%;
-		left: 0;
-		right: 0;
-		position: absolute;
-		transform: translateY(-20%);
-		background-position:center center;
-		background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    @include media-breakpoint-up(medium) {
+        min-height: 50vh
+    }
+    .parallax-background {
+        height: 150%;
+        top: -20%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        transform: translateY(-20%);
+        background-position: center center;
+        background-repeat: no-repeat;
 
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: auto;
-			max-width: 100%;
-		}
-	}
-	.section-content {
-		color: $gray-lightest !important;
-	}
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+    .section-content {
+        color: $gray-lightest !important;
+    }
 }
+
 #parallax-section-one {
-	.parallax-background {
-		background-image: url('http://local.othellodeliny.dev/wp-content/uploads/2016/08/othello-external-background-dark.jpg');
-	}
+    .parallax-background {
+        background-image: url('http://local.othellodeliny.dev/wp-content/uploads/2016/08/othello-external-background-dark.jpg');
+    }
 }
+
 #parallax-section-two {
-	.parallax-background {
-		background-image: url('http://local.othellodeliny.dev/wp-content/uploads/2016/08/homepage-slider-background-4.jpg');
-	}
+    .parallax-background {
+        background-image: url('http://local.othellodeliny.dev/wp-content/uploads/2016/08/homepage-slider-background-4.jpg');
+    }
 }
 
 .screen-reader-text {

@@ -3,96 +3,96 @@
 =====================================================*/
 $toggle-btn-color: $brand-primary;
 button.nav-toggle {
-	-webkit-appearance: none;
-	background: transparent;
-	border: 0;
-	box-shadow: 0;
-	outline: 0;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    box-shadow: 0;
+    outline: 0;
 }
 
 .nav-toggle {
-	width: 48px;
-	height: 40px;
-	display: block;
+    width: 48px;
+    height: 40px;
+    display: block;
 }
 
 .nav-toggle .menu-icon {
-	display: block;
-	position: absolute;
-	z-index: 3;
-	top: 0;
-	right: 0;
-	width: 48px;
-	height: 40px;
-	cursor: pointer;
-	transition: opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-	-webkit-tap-highlight-color: transparent
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 40px;
+    cursor: pointer;
+    transition: opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-tap-highlight-color: transparent
 
 }
 
 .nav-toggle.is-active .menu-icon {
-	transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .nav-toggle .menu-icon-bar {
-	position: absolute;
-	z-index: 3;
-	top: 0;
-	left: 0;
-	width: 48px;
-	height: 40px;
-	transition: opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1)
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 40px;
+    transition: opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 
 .nav-toggle .menu-icon-bar-top {
-	transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-	transform: rotate(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(0);
 }
 
 .nav-toggle.is-active .menu-icon-bar-top {
-	transition: transform 0.2s 0.15s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-	transform: rotate(45deg)
+    transition: transform 0.2s 0.15s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(45deg)
 }
 
 .nav-toggle .menu-icon-bar-bottom {
-	transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-	transform: rotate(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(0);
 }
 
 .nav-toggle.is-active .menu-icon-bar-bottom {
-	transition: transform 0.2s 0.15s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-	transform: rotate(-45deg);
+    transition: transform 0.2s 0.15s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(-45deg);
 }
 
 .nav-toggle .menu-icon-bar-inner {
-	display: block;
-	width: 18px;
-	height: 2px;
-	background: $toggle-btn-color;
-	position: absolute;
-	left: 16px;
-	z-index: 1;
-	-webkit-transition: -webkit-transform 0.15s;
-	transition: transform 0.15s
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: $toggle-btn-color;
+    position: absolute;
+    left: 16px;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: transform 0.15s
 }
 
 .nav-toggle .menu-icon-bar-inner-top {
-	top: 18px;
-	transition: transform 0.15s 0.15s;
-	transform: translateY(-3px)
+    top: 18px;
+    transition: transform 0.15s 0.15s;
+    transform: translateY(-3px)
 }
 
 .nav-toggle .menu-icon-bar-inner-bottom {
-	bottom: 18px;
-	transform: translateY(3px)
+    bottom: 18px;
+    transform: translateY(3px)
 }
 
 .nav-toggle.is-active .menu-icon-bar-inner-top {
-	transform: translateY(0);
-	transition-delay: 0;
+    transform: translateY(0);
+    transition-delay: 0;
 }
 
 .nav-toggle.is-active .menu-icon-bar-inner-bottom {
-	transition: transform 0.15s;
-	transform: translateY(0)
+    transition: transform 0.15s;
+    transform: translateY(0)
 }

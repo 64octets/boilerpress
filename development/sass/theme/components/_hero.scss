@@ -5,56 +5,54 @@
 -------------------------------------------------------------- */
 
 .section-hero {
-	height: 400px;
-	width: 100%;
-	overflow: hidden;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .section-hero .section-background {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-	color: blue;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: blue;
 }
 
 .section-hero:not(.parallax-section) {
-	padding-top: 100px;
-	padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .parallax-section {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	& > .section-content {
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    & > .section-content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 
 @media only screen and (min-width: 520px) {
-	.section-hero,
-	.othello-parallax-section {
-		padding-top: 160px !important;
-		padding-bottom: 160px !important;
-	}
+    .section-hero,
+    .othello-parallax-section {
+        padding-top: 160px !important;
+        padding-bottom: 160px !important;
+    }
 }
-
 
 @media only screen and (min-width: 961px) {
-	.section-hero,
-	.othello-parallax-section {
-		padding-top: 200px !important;
-		padding-bottom: 200px !important;
-	}
+    .section-hero,
+    .othello-parallax-section {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
+    }
 }
 
-
 #wrap .max-title5 *,
-.hero-title  h1 {
-	font-family: $headings-font-family;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: #eee;
+.hero-title h1 {
+    font-family: $headings-font-family;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #eee;
 }

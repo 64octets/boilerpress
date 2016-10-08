@@ -4209,7 +4209,7 @@ pre {
   display: inline-block;
   max-width: 100%;
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  padding-right: 0.75rem \9;
+  padding-right: 0.75rem \9 ;
   color: #55595c;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
@@ -4904,7 +4904,7 @@ base::-moz-progress-bar,
   border-radius: 0.25rem;
   box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1); }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress {
     background-color: #eee;
     border-radius: 0.25rem;
@@ -4933,7 +4933,7 @@ base::-moz-progress-bar,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-bar-striped {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -4946,7 +4946,7 @@ base::-moz-progress-bar,
 .progress-animated[value]::-moz-progress-bar {
   animation: progress-bar-stripes 2s linear infinite; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-animated .progress-bar-striped {
     -webkit-animation: progress-bar-stripes 2s linear infinite;
             animation: progress-bar-stripes 2s linear infinite; } }
@@ -4960,7 +4960,7 @@ base::-moz-progress-bar,
 .progress-success[value]::-ms-fill {
   background-color: #5cb85c; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-success .progress-bar {
     background-color: #5cb85c; } }
 
@@ -4973,7 +4973,7 @@ base::-moz-progress-bar,
 .progress-info[value]::-ms-fill {
   background-color: #5bc0de; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-info .progress-bar {
     background-color: #5bc0de; } }
 
@@ -4986,7 +4986,7 @@ base::-moz-progress-bar,
 .progress-warning[value]::-ms-fill {
   background-color: #f0ad4e; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-warning .progress-bar {
     background-color: #f0ad4e; } }
 
@@ -4999,7 +4999,7 @@ base::-moz-progress-bar,
 .progress-danger[value]::-ms-fill {
   background-color: #d9534f; }
 
-@media screen and (min-width: 0\0) {
+@media screen and (min-width: 0 \0 ) {
   .progress-danger .progress-bar {
     background-color: #d9534f; } }
 
@@ -7931,21 +7931,21 @@ dl.variation {
   .demo_store {
     bottom: 0; }
   /**
-	 * Handheld footer bar
-	 */
+     * Handheld footer bar
+     */
   .storefront-handheld-footer-bar {
     display: none; }
   /**
-	 * Breadcrumbs
-	 */
+     * Breadcrumbs
+     */
   .woocommerce-breadcrumb {
     padding: 1.41575em 99em;
     margin-left: -99em;
     margin-right: -99em;
     margin-bottom: 4.2358em; }
   /**
-	 * Responsive tables
-	 */
+     * Responsive tables
+     */
   table.shop_table_responsive thead {
     display: table-header-group; }
   table.shop_table_responsive tbody th {
@@ -7955,8 +7955,8 @@ dl.variation {
     table.shop_table_responsive tr td:before {
       display: none; }
   /**
-	 * Header Elements
-	 */
+     * Header Elements
+     */
   .site-header-cart {
     position: relative; }
     .site-header-cart .cart-contents {
@@ -8009,8 +8009,8 @@ dl.variation {
     .site-search form {
       margin: 0; }
   /**
-	 * Reset mobile product styles
-	 */
+     * Reset mobile product styles
+     */
   ul.products li.product {
     clear: none;
     width: 100%;
@@ -8020,8 +8020,8 @@ dl.variation {
     ul.products li.product.last {
       margin-right: 0 !important; }
   /**
-	 * Full width content area product layout
-	 */
+     * Full width content area product layout
+     */
   .page-template-template-fullwidth-php .site-main .columns-1 ul.products li.product,
   .page-template-template-homepage-php .site-main .columns-1 ul.products li.product,
   .layout-full-width .site-main .columns-1 ul.products li.product {
@@ -8054,8 +8054,8 @@ dl.variation {
     width: 15.25424%;
     float: left; }
   /**
-	 * Main content area (adjacent to sidebar) product layout
-	 */
+     * Main content area (adjacent to sidebar) product layout
+     */
   #page #content .columns-1 ul.products li.product {
     width: 100%;
     margin-right: 0;
@@ -8079,8 +8079,8 @@ dl.variation {
     width: 31.81818%;
     float: left; }
   /**
-	 * Single product page
-	 */
+     * Single product page
+     */
   .single-product .site-main div.product .images {
     position: relative;
     min-height: 1px;
@@ -8186,8 +8186,8 @@ dl.variation {
     padding: 0;
     margin-bottom: 0; }
   /**
-	 * Cart
-	 */
+     * Cart
+     */
   .woocommerce-cart .hentry,
   .woocommerce-checkout .hentry {
     border-bottom: 0;
@@ -8264,8 +8264,8 @@ dl.variation {
     width: 49.15254%;
     float: right; }
   /**
-	 * Checkout
-	 */
+     * Checkout
+     */
   .col2-set {
     width: 54.54545%;
     float: left; }
@@ -8354,8 +8354,8 @@ dl.variation {
   #order_review .shop_table {
     margin-bottom: 2.61792em; }
   /**
-	 * My Account
-	 */
+     * My Account
+     */
   table + .addresses {
     margin-top: 1.618em; }
   .col2-set#customer_login,
@@ -8452,8 +8452,8 @@ dl.variation {
       text-align: center;
       text-indent: 0; }
   /**
-	 * General WooCommerce Components
-	 */
+     * General WooCommerce Components
+     */
   .form-row-first {
     width: 48.86364%;
     float: left;

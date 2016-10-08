@@ -1,101 +1,101 @@
 @include media-query($until: $mobile-nav-breakpoint) {
-	.navbar {
-		float: none;
-		clear: both;
-		position: relative;
-		top: 100%;
-		left: 0;
-		right: 0;
-		margin: 0 ( $grid-gutter-width / 2 ) * -1;
-		background: $mobile-nav-bg;
-		z-index: 100;
-		border-bottom: $mobile-nav-border-color solid 1px;
-		background: $mobile-nav-bg;
-		line-height: 1.6;
-	}
-	.main-navigation .nav {
-		& > .nav-item > .nav-link {
-			display: block;
-			width: 100%;
-			position: relative;
-			z-index: 1;
-			padding: 12px $grid-gutter-width / 2;
-		}
+    .navbar {
+        float: none;
+        clear: both;
+        position: relative;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 ( $grid-gutter-width / 2 ) * -1;
+        background: $mobile-nav-bg;
+        z-index: 100;
+        border-bottom: $mobile-nav-border-color solid 1px;
+        background: $mobile-nav-bg;
+        line-height: 1.6;
+    }
+    .main-navigation .nav {
+        & > .nav-item > .nav-link {
+            display: block;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            padding: 12px $grid-gutter-width / 2;
+        }
 
-		& > .nav-item > .nav-link {
-			display: block;
-			width: 100%;
-			position: relative;
-			z-index: 1;
-			padding: 12px $grid-gutter-width / 2;
-		}
+        & > .nav-item > .nav-link {
+            display: block;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            padding: 12px $grid-gutter-width / 2;
+        }
 
-		.nav-item {
-			line-height: 20px;
-			background: transparent;
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
-			width: 100% !important;
-		}
+        .nav-item {
+            line-height: 20px;
+            background: transparent;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            width: 100% !important;
+        }
 
-		.nav-link {
-			display: block;
-		}
+        .nav-link {
+            display: block;
+        }
 
-		.nav-toggle-subarrow {
-			display: block;
-			color: $mobile-nav-link-color;
-			border-left: 1px solid rgba(0, 0, 0, 0.1);
-			font-weight: normal;
-			position: absolute;
-			top: 0;
-			right: 0;
-			cursor: pointer;
-			text-align: center;
-			padding: 11px 20px;
-			z-index: 10;
-			font-size: 14px;
-			@include font-smoothing(on);
-		}
+        .nav-toggle-subarrow {
+            display: block;
+            color: $mobile-nav-link-color;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: normal;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            text-align: center;
+            padding: 11px 20px;
+            z-index: 10;
+            font-size: 14px;
+            @include font-smoothing(on);
+        }
 
-		.dropdown-toggle.is-active > .nav-toggle-subarrow .fa-plus:before {
-			content: "\f068" !important;
-		}
-		.nav-toggle-dropdown > ul {
-			display: block !important;
-		}
-		.dropdown-toggle:after {
-			display: none !important;
-		}
+        .dropdown-toggle.is-active > .nav-toggle-subarrow .fa-plus:before {
+            content: "\f068" !important;
+        }
+        .nav-toggle-dropdown > ul {
+            display: block !important;
+        }
+        .dropdown-toggle:after {
+            display: none !important;
+        }
 
-		.sub-menu {
-			position: relative;
-			padding-bottom: 0;
-			background-color: $mobile-nav-submenu-bg;
-			border: none;
-			box-shadow: none;
+        .sub-menu {
+            position: relative;
+            padding-bottom: 0;
+            background-color: $mobile-nav-submenu-bg;
+            border: none;
+            box-shadow: none;
 
-			.nav-item:last-child {
-				border-bottom: none;
-			}
-			.nav-link {
-				padding: 12px 30px;
-				display: block;
-				width: 100%;
-				border-top: none;
-				&:hover {
-					background: transparent;
-				}
-			}
-			.sub-menu .nav-item {
-				padding: 12px 70px;
-				border-top: none;
-			}
-			.sub-menu .nav-link {
-				padding: 12px 105px;
-			}
-			.sub-menu {
-				left: 0px;
-			}
-		}
-	}
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+            .nav-link {
+                padding: 12px 30px;
+                display: block;
+                width: 100%;
+                border-top: none;
+                &:hover {
+                    background: transparent;
+                }
+            }
+            .sub-menu .nav-item {
+                padding: 12px 70px;
+                border-top: none;
+            }
+            .sub-menu .nav-link {
+                padding: 12px 105px;
+            }
+            .sub-menu {
+                left: 0px;
+            }
+        }
+    }
 }

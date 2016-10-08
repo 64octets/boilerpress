@@ -3245,7 +3245,7 @@ section.blox.parallax-sec {
 
 #hero {
   width: 100%;
-  height: calc( 100vh - 5.99684em);
+  height: calc(100vh - 5.99684em);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

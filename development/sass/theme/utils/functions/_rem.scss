@@ -6,11 +6,11 @@
  * @returns  {string} the rem value
  */
 @function rem($px, $font-size-root: $font-size-root) {
-  @if unitless($px) {
-    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-    @return px-to-em($px + 0px); // That may fail.
-  } @else if unit($px) == rem {
-    @return $px;
-  }
-  @return ($px / $font-size-root) * 1rem;
+    @if unitless($px) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @return px-to-em($px + 0px); // That may fail.
+    } @else if unit($px) == rem {
+        @return $px;
+    }
+    @return ($px / $font-size-root) * 1rem;
 }
