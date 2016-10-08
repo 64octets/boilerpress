@@ -40,7 +40,6 @@ if ( ! class_exists( 'BoilerPress' ) ) :
 
             add_filter( 'nav_menu_css_class', array( $this, 'nav_menu_css_class' ), 10, 4 );
             add_filter( 'nav_menu_item_id', array( $this, 'nav_menu_item_id' ), 10, 4 );
-            add_filter( 'nav_menu_link_attributes', array( $this, 'nav_menu_link_attributes' ), 10, 4 );
         }
 
         public function load() {
@@ -217,7 +216,10 @@ if ( ! class_exists( 'BoilerPress' ) ) :
          * with the filter 'boilerpress_google_fonts'
          */
         public function google_webfonts() {
-            $google_fonts = apply_filters( 'boilerpress_google_fonts', array() );
+            $google_fonts = apply_filters( 'boilerpress_google_fonts', array(
+                'dosis' => 'Dosis:200,300,400,500,600',
+                'playball' => 'Playball'
+            ) );
 
             if ( ! empty( $google_fonts ) ) {
                 wp_enqueue_style( 'boilerpress-google-fonts', get_google_fonts_url( $google_fonts ), array(), 1 );
