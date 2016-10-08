@@ -14,17 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'BoilerPress' ) ) :
 
     /**
-     * The main Storefront class
+     * The Boilerpress theme class
      */
     class BoilerPress {
 
         private static $structured_data;
 
-        /**
-         * Setup class.
-         *
-         * @since 1.0
-         */
         public function __construct() {
             $this->load();
             add_action( 'after_setup_theme',           array( $this, 'setup' ) );
@@ -202,6 +197,12 @@ if ( ! class_exists( 'BoilerPress' ) ) :
             }
         }
 
+        /**
+         * Load webfonts from Typekit.
+         * To use Typekit fonts, create a kit containing the desired fonts (on Typekit.com).
+         * Enter the kit ID to load the fonts on the website. Typekit ID can be set in the customizer
+         * user theme settings, or with the filter 'boilerpress_typekit_id'
+         */
         public function typekit_webfonts() {
             $typekit_id = (string) apply_filters( 'boilerpress_typekit_id', get_theme_mod( 'bp_typekit_id' ) );
 
@@ -210,7 +211,11 @@ if ( ! class_exists( 'BoilerPress' ) ) :
             }
         }
 
-
+        /**
+         * Loads webfonts from google fonts.
+         * Google fonts can be selected in the theme's customizer in the dashboard or
+         * with the filter 'boilerpress_google_fonts'
+         */
         public function google_webfonts() {
             $google_fonts = apply_filters( 'boilerpress_google_fonts', array() );
 
@@ -275,6 +280,8 @@ if ( ! class_exists( 'BoilerPress' ) ) :
          * @param $depth
          *
          * @return array
+         *
+         * @TODO Needs to be rewritten
          */
         public function nav_menu_css_class( $classes, $item, $args, $depth ) {
 
@@ -311,20 +318,7 @@ if ( ! class_exists( 'BoilerPress' ) ) :
             return 'nav-item-' . $item->ID;
         }
 
-        public function nav_menu_link_attributes( $attrs, $item, $args ) {
-            $classes = array( 'nav-link' );
-
-            if ( in_array( 'menu-item-has-children', $item->classes, TRUE ) ) {
-                $classes[]                = 'dropdown-toggle toggle-switch';
-                $attrs[ 'data-toggle' ]   = 'dropdown';
-                $attrs[ 'aria-expanded' ] = 'false';
-                $attrs[ 'aria-haspopup' ] = 'true';
-            }
-            $attrs[ "class" ] = implode( ' ', $classes );
-            $attrs[ "alt" ]   = $item->title;
-
-            return $attrs;
-        }
+        public function nav_menu_link_attributes( $attrs, $item, $args ) {}
 
         /**
          * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
