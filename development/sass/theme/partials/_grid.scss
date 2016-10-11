@@ -65,23 +65,3 @@
     @include make-grid-columns();
 }
 
-$column-layouts: (1, 2, 3, 4, 6);
-@each $layout in $column-layouts {
-    .columns-#{$layout} .products,
-    .single-product .thumbnails.columns-#{$layout},
-    .footer-widgets.columns-#{$layout} {
-        @extend %row;
-    }
-
-    .columns-#{$layout} .products .product,
-    .single-product .thumbnails.columns-#{$layout} a.zoom,
-    .footer-widgets.columns-#{$layout} .block {
-        margin-left: 0;
-        margin-right: 0;
-        @extend %column;
-
-        @include media-query($from: medium) {
-            @include make-col($grid-columns / $layout);
-        }
-    }
-}

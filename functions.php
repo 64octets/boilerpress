@@ -17,7 +17,7 @@ $boilerpress = (object) array(
      */
     'main'    => require __DIR__ . '/inc/class-boilerpress.php',
 );
-
+paginate_links();
 /**
  * Register custom meta-boxes for pages, posts, taxonomies
  */

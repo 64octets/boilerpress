@@ -1,0 +1,63 @@
+/**
+ * Forms
+ */
+form {
+    margin-bottom: $spacer * 1.75;
+}
+
+button,
+input[type="button"],
+input[type="reset"]
+input[type="submit"],
+.button {
+    @extend .btn;
+}
+
+button.submit,
+input[type="submit"],
+.button-primary {
+    @extend .btn-primary;
+}
+
+input[type="reset"],
+.button-secondary {
+    @extend .btn-secondary;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0; /* Addresses excess padding in IE8/9 */
+}
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+    -webkit-appearance: none;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text {
+    @extend .form-control;
+}
+
+textarea {
+    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    padding-left: $spacer * 0.75;
+    vertical-align: top; /* Improves readability and alignment in all browsers */
+    width: 100%;
+}
+
+label {
+    font-weight: 600;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.5s 0.5s ease;
+    -moz-transition: opacity 0.5s 0.5s ease;
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
+}

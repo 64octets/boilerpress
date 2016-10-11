@@ -21,10 +21,7 @@
     position: relative;
 }
 
-.section,
-.header,
-.footer,
-.newsbar {
+.section, .header, .footer {
     &.inverse {
         background: $brand-inverse;
         color: $inverse-text-color;

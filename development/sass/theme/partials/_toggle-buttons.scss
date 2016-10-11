@@ -26,8 +26,6 @@ button.nav-toggle {
     height: 40px;
     cursor: pointer;
     transition: opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -webkit-tap-highlight-color: transparent
-
 }
 
 .nav-toggle.is-active .menu-icon {
@@ -72,7 +70,6 @@ button.nav-toggle {
     position: absolute;
     left: 16px;
     z-index: 1;
-    -webkit-transition: -webkit-transform 0.15s;
     transition: transform 0.15s
 }
 

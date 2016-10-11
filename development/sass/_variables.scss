@@ -1,3 +1,7 @@
+
+
+@import "vendor/modular-scale/ratios";
+
 // =======================================================
 // =======================================================
 //
@@ -144,6 +148,7 @@ $breakpoint-names: (
     x-large: xl
 );
 
+
 // =======================================================
 // =======================================================
 //
@@ -185,8 +190,8 @@ $font-size-lg: 1.125rem; // 18px
 $font-size-sm: 0.875rem; // 14px
 $font-size-xs: 0.75rem; // 12px
 
-$ms-base: 1em, .875em;
-$ms-ratio: $line-height-base;
+$ms-base: $font-size-base;
+$ms-ratio: $minor-third;
 
 // -----------------------------------------
 // Headings
@@ -225,9 +230,9 @@ $display3-weight: 800;
 // Navbar
 // -----------------------------------------
 
-$navbar-height: ms(8); // desktop header
-$mobile-navbar-height: ms(6);
-$sticky-navbar-height: ms(6);
+$navbar-height: 80px; // desktop header
+$mobile-navbar-height: 60px;
+$sticky-navbar-height: 60px;
 $mobile-nav-breakpoint: medium;
 
 $navbar-bg: #FFF;
@@ -246,7 +251,12 @@ $mobile-nav-link-color: #fff;
 // Pagination
 // -----------------------------------------
 
-$pagination-active-bg: #5F788E;
-$pagination-active-border: $pagination-active-bg;
-$pagination-active-color: #fff;
-$pagination-color: darken(saturate($pagination-active-bg, 5%), 5%);
+// -----------------------------------------
+// Import Bootstrap 4 Variables
+// -----------------------------------------
+@import "../../node_modules/bootstrap/scss/variables";
+
+// -----------------------------------------
+// Import Font-Awesome Variables
+// -----------------------------------------
+@import "vendor/font-awesome/variables";

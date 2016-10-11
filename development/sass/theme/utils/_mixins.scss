@@ -1,6 +1,20 @@
+// -----------------------------------------
+// Bootstrap 4 Mixins
+// -----------------------------------------
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+// -----------------------------------------
+// Font-Awesome mixins
+// -----------------------------------------
+@import "../../vendor/font-awesome/mixins";
+
+// -----------------------------------------
+// Custom Mixins
+// -----------------------------------------
 @import "mixins/font-smoothing";
 @import "mixins/media-query";
 @import "mixins/ifont";
+
 
 @mixin underlinedLink() {
     font-weight: 400;
