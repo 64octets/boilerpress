@@ -123,7 +123,7 @@ gulp.task( 'buildFiles', function () {
  * installable theme
  */
 gulp.task( 'buildZip', function () {
-    return gulp.src( config.buildIncludeFiles, {read: false} )
+    return gulp.src( config.buildIncludeFiles )
     .pipe( plugins.zip( config.name + '.zip' ) )
     .pipe( gulp.dest( config.buildDirectory ) )
 } );
